@@ -1,0 +1,19 @@
+{
+  "name": "TrelloPM",
+  "version": "1.0.0",
+  "description": "Trello Clone",
+  "main": "index.js",
+  "repository": "https://github.com/J8298c/TrelloPM.git",
+  "author": "j8298c <juliocmojica@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "mongoose": "^5.0.15"
+  }
+}
