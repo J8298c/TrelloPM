@@ -1,18 +1,14 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
-const config = require("./server/config");
-const cors = require("cors");
+const express = require('express');
+const bodyParser = require('body-parser');
+const config = require('./server/config');
 
 const app = express();
 
-app.use(bodyParser, json());
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(cors());
-
-app.listen(config.app.port, () => {
-	console.log(`server is listening on port ${config.app.port}`);
+app.listen(config.PORT, () => {
+  console.log(`app is listening on port: ${config.PORT}`);
 });
 
 module.exports = app;
