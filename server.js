@@ -12,6 +12,7 @@ mongoose.connect(config.DBURI, () => {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+require('./server/routes/task_routes')(app);
 app.listen(config.PORT, () => {
   console.log(`app is listening on port: ${config.PORT}`);
 });
