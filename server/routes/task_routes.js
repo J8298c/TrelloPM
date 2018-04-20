@@ -6,22 +6,12 @@ module.exports = app => {
   });
 
   app.post('/task', (req, res) => {
-    const {
-      createdOn,
-      createdBy,
-      dueOn,
-      assignedTo,
-      taskBody,
-      status
-    } = req.body;
-
     let task = new Task({
-      createdOn,
-      createdBy,
-      dueOn,
-      assignedTo,
-      taskBody,
-      status
+      createdBy: req.body.createdBy,
+      dueOn: req.body.dueOn,
+      assignedTo: req.body.assignedTo,
+      taskBody: req.body.taskBody,
+      status: req.body.status
     });
 
     task.save((err, task) => {
