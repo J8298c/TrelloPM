@@ -14,6 +14,5 @@ module.exports = app => {
       if (err) return console.log(err);
       console.log('saved');
     });
-    res.send('check the logs');
   });
 };
