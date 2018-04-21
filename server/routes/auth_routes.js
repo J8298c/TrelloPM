@@ -1,7 +1,7 @@
 module.exports = (app, passport) => {
   const User = require('../models/user_model');
   const jwt = require('jsonwebtoken');
-  const config = require('../config/config');
+  const config = require('../config');
 
   app.post('/register', (req, res) => {
     console.log(req.body);
