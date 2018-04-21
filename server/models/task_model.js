@@ -4,22 +4,24 @@ const Schema = mongoose.Schema;
 const TaskSchema = new Schema({
   createdOn: {
     type: Date,
-    default: Date.now
+    default: Date.now()
   },
-  createdBy: String,
-  dueOn: { type: Date },
-  assignedTo: String,
-  taskBody: {
+  assignedTo: {
     type: String,
     required: true
   },
-  status: {
+  dueOn: {
+    type: Date
+  },
+  createdBy: {
+    type: String
+  },
+  taskBody: {
     type: String,
-    enum: ['complete', 'not started', 'in progress'],
-    default: 'not started'
+    required: true
   }
 });
 
 const Task = mongoose.model('Task', TaskSchema);
 
-module.export = Task;
+module.exports = Task;

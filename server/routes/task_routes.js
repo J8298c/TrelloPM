@@ -1,27 +1,19 @@
-const Task = require('../models/task_model');
-
 module.exports = app => {
-  app.get('/task', (req, res) => {
-    res.send('I am working');
-  });
+  const Task = require('../models/task_model');
 
   app.post('/task', (req, res) => {
-    let task = new Task({
+    console.log(req.body);
+
+    const task = new Task({
       createdBy: req.body.createdBy,
-      dueOn: req.body.dueOn,
       assignedTo: req.body.assignedTo,
-      taskBody: req.body.taskBody,
-      status: req.body.status
+      taskBody: req.body.taskBody
     });
 
     task.save((err, task) => {
-      if (err) errorHandler(err);
-
-      res.json({ status: 200, task });
+      if (err) return console.log(err);
+      console.log('saved');
     });
+    res.send('check the logs');
   });
 };
-
-function errorHandler(err) {
-  console.log(err);
-}
