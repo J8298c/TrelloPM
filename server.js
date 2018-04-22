@@ -32,6 +32,7 @@ app.use(passport.initialize());
 require('./api/config/passport')(passport);
 
 require('./api/routes/auth.routes')(app, passport);
+require('./api/routes/user.routes')(app, passport);
 require('./api/routes/task.routes')(app);
 app.listen(config.PORT, () => {
   console.log(`app is listening on port: ${config.PORT}`);
