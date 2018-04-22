@@ -15,6 +15,7 @@ mongoose.connection.on('error', () => {
 
 app.use(bodyParser.json());
 
+require('./api/routes/task.routes')(app);
 app.listen(config.PORT, () => {
   console.log(`app is listening on port: ${config.PORT}`);
 });
