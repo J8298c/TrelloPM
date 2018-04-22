@@ -32,9 +32,23 @@
 }
 .splash-body {
   background-color: #e1e2e1;
+  height: 100%;
 }
 .row.splash-body {
-  height: 200px;
+  height: 100%;
+}
+button.ui.blue.button.splash-btn {
+  display: block;
+  margin: 15px auto;
+}
+.ui.buttons.splash-btn {
+  margin: 45px auto;
+  width: 100%;
+}
+.splash-img-container {
+  width: 75%;
+  margin: 15px auto;
+  padding: 11%;
 }
 .splash-top {
   background-color: #052576;

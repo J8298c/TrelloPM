@@ -8,7 +8,7 @@ class AuthForm extends Component {
 
   render(props) {
     return (
-      <Container>
+      <Container className="splash-auth">
         <Form>
           {!this.state.showLogin ? (
             <span>
@@ -27,7 +27,8 @@ class AuthForm extends Component {
               <Button
                 onClick={this.props.onSignUp}
                 color="blue"
-                content="signup"
+                content="Signup"
+                className="splash-btn"
               />
             </span>
           ) : (
@@ -41,6 +42,7 @@ class AuthForm extends Component {
                 onChange={this.props.onPasswordLogin}
               />
               <Button
+                className="splash-btn"
                 onClick={this.props.onLogin}
                 color="blue"
                 content="Login"
@@ -48,12 +50,18 @@ class AuthForm extends Component {
             </span>
           )}
         </Form>
-        <Button.Group>
-          <Button onClick={() => this.setState({ showLogin: true })}>
+        <Button.Group className="splash-btn">
+          <Button
+            color="teal"
+            onClick={() => this.setState({ showLogin: true })}
+          >
             Login
           </Button>
           <Button.Or />
-          <Button onClick={() => this.setState({ showLogin: false })}>
+          <Button
+            color="green"
+            onClick={() => this.setState({ showLogin: false })}
+          >
             Signup
           </Button>
         </Button.Group>

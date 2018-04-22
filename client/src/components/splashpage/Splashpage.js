@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Form, Container } from 'semantic-ui-react';
+import { Grid, Form, Container, Image } from 'semantic-ui-react';
 import AuthForm from './AuthForm';
 
 class Splashpage extends Component {
@@ -15,7 +15,7 @@ class Splashpage extends Component {
 
   render() {
     return (
-      <Grid>
+      <Grid style={{ height: '100%' }}>
         <Grid.Row className="splash-top" />
         <Grid.Row className="splash-header">
           <Grid.Column>
@@ -23,6 +23,11 @@ class Splashpage extends Component {
           </Grid.Column>
         </Grid.Row>
         <Grid.Row className="splash-body">
+          <Grid.Column width={12}>
+            <div className="splash-img-container">
+              <Image fluid src={require('../../assests/landpageimg.png')} />
+            </div>
+          </Grid.Column>
           <Grid.Column width={3} reversed>
             <AuthForm
               onEmailSignUp={evt =>
