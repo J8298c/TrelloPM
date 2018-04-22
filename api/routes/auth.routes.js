@@ -15,9 +15,9 @@ module.exports = (app, passport) => {
         email: req.body.email,
         password: req.body.password
       });
-      user.save(err => {
+      user.save((err, user) => {
         if (err) return res.json({ status: false, message: err });
-        return res.json({ success: true, message: 'created new user' });
+        return res.json({ success: true, message: 'created new user', user: user });
       });
     }
   });
