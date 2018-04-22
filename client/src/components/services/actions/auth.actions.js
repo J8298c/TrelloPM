@@ -8,7 +8,21 @@ export function getUser(user) {
 }
 
 export function logUserIn(email, password, dispatch) {
-  return dispatch => {};
+  return dispatch => {
+    fetch('/login', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify({ email: email, password: password })
+    })
+      .then(res => res.json())
+      .then(json => {
+        if (json.success) {
+          return dispatch(getUser(json.user));
+        }
+      });
+  };
 }
 
 export function registerUser(email, password, dispatch) {
