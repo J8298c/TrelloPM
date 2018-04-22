@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-import Splashpage from './components/Splashpage';
+import Splashpage from './components/splashpage/Splashpage';
 const RouterComponent = () => (
   <BrowserRouter>
     <Route path="/" component={Splashpage} />
