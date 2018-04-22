@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import RouterComponent from './RouterComponent';
+import { store, persistor } from './store';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
 
 class App extends Component {
   render() {
-    return <RouterComponent />;
+    return (
+      <Provider store={store}>
+        <PersistGate loading={null} persistor={persistor}>
+          <RouterComponent />
+        </PersistGate>
+      </Provider>
+    );
   }
 }
 

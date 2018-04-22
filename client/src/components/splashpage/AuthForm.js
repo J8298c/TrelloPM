@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Container, Form, Button, ButtonGroup } from 'semantic-ui-react';
+import React, { Component } from "react";
+import { Container, Form, Button, ButtonGroup } from "semantic-ui-react";
 
 class AuthForm extends Component {
   state = {
@@ -18,10 +18,12 @@ class AuthForm extends Component {
               />
               <Form.Input
                 placeholder="Enter Password"
+                type="password"
                 onChange={this.props.onPasswordSignUp}
               />
               <Form.Input
                 placeholder="Confirm Password"
+                type="password"
                 onChange={this.props.onPasswordConfrim}
               />
               <Button
@@ -38,7 +40,8 @@ class AuthForm extends Component {
                 onChange={this.props.onEmailLogin}
               />
               <Form.Input
-                placeholder="Confirm Password"
+                placeholder="Enter password"
+                type="password"
                 onChange={this.props.onPasswordLogin}
               />
               <Button
