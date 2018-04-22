@@ -1,37 +1,14 @@
 {
   "name": "TrelloPM",
   "version": "1.0.0",
-  "description": "Trello Clone",
+  "description": "task and project management ",
   "main": "index.js",
   "repository": "https://github.com/J8298c/TrelloPM.git",
   "author": "j8298c <juliocmojica@gmail.com>",
   "license": "MIT",
-  "private": false,
-  "scripts": {
-    "start": "node server.js",
-    "client": "npm run start --prefix client",
-    "server": "nodemon server.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "test": "jest --watchAll"
-  },
-  "jest": {
-    "testEnvironment": "node"
-  },
   "dependencies": {
-    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.2",
-    "concurrently": "^3.5.1",
-    "cors": "^2.8.4",
     "express": "^4.16.3",
-    "express-graphql": "^0.6.12",
-    "express-session": "^1.15.6",
-    "graphql": "^0.13.2",
-    "jest": "^22.4.3",
-    "jsonwebtoken": "^8.2.1",
-    "mongoose": "^5.0.15",
-    "morgan": "^1.9.0",
-    "nodemon": "^1.17.3",
-    "passport": "^0.4.0",
-    "passport-jwt": "^4.0.0"
+    "mongoose": "^5.0.15"
   }
 }
