@@ -19,7 +19,7 @@ const UserSchema = new Schema({
     type: String
   },
   image: String,
-  boards: [{ type: Schema.Types.ObjectId, ref: 'Board' }]
+  tasks: [{ type: Schema.Types.ObjectId, ref: 'Task' }]
 });
 
 UserSchema.pre('save', function(next) {

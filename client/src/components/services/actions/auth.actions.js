@@ -26,6 +26,7 @@ export function logUserIn(email, password, dispatch) {
 }
 
 export function registerUser(email, password, dispatch) {
+  console.log('hitting this url');
   return dispatch => {
     fetch('/register', {
       method: 'POST',

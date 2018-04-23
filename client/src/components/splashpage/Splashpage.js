@@ -3,6 +3,9 @@ import { Grid, Form, Container, Image } from 'semantic-ui-react';
 import AuthForm from './AuthForm';
 import { connect } from 'react-redux';
 import { logUserIn, registerUser } from '../services/actions/auth.actions';
+import { Redirect } from 'react-router-dom';
+import * as _ from 'lodash';
+
 class Splashpage extends Component {
   state = {};
 
@@ -18,7 +21,6 @@ class Splashpage extends Component {
         message: 'Confirmation password doesnt match password provided'
       });
     }
-    console.log(this.state);
   }
 
   onAcctLogin() {
@@ -27,6 +29,9 @@ class Splashpage extends Component {
   }
 
   render() {
+    if (this.props.user && !_.isEmpty(this.props.user)) {
+      return <Redirect to={`${this.props.user._id}/taskhome`} />;
+    }
     return (
       <Grid style={{ height: '100%' }}>
         <Grid.Row className="splash-top" />
@@ -68,7 +73,6 @@ class Splashpage extends Component {
 
 function mapStateToProps({ userState }) {
   const { user } = userState;
-
   return {
     user
   };

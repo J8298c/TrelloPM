@@ -17,7 +17,11 @@ module.exports = (app, passport) => {
       });
       user.save((err, user) => {
         if (err) return res.json({ status: false, message: err });
-        return res.json({ success: true, message: 'created new user', user: user });
+        return res.json({
+          success: true,
+          message: 'created new user',
+          user: user
+        });
       });
     }
   });
@@ -31,7 +35,7 @@ module.exports = (app, passport) => {
       } else {
         user.comparePassword(req.body.password, (err, isMatch) => {
           if (isMatch && !err) {
-            var token = jwt.sign(user.toJSON(), config.secret, {
+            var token = jwt.sign(user.toJSON(), config.SECRET, {
               expiresIn: 10080 // in seconds
             });
             res.json({ success: true, token: 'jwt ' + token, user: user });
