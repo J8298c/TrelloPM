@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Container, Form, Button, ButtonGroup } from "semantic-ui-react";
+import React, { Component } from 'react';
+import { Container, Form, Button } from 'semantic-ui-react';
 
 class AuthForm extends Component {
   state = {

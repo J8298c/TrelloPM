@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Form, Container, Image } from 'semantic-ui-react';
+import { Grid, Image } from 'semantic-ui-react';
 import AuthForm from './AuthForm';
 import { connect } from 'react-redux';
 import { logUserIn, registerUser } from '../services/actions/auth.actions';
