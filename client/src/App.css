@@ -61,7 +61,7 @@ button.ui.blue.button.splash-btn {
     transform: rotate(360deg);
   }
 }
-.column.title-cell {
+.column.task-header {
   text-align: center;
   background-color: #3b4ba5;
   color: #e1e2e1;
