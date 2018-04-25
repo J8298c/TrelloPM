@@ -1,15 +1,19 @@
-import React, { Component } from "react";
-import { Container } from "semantic-ui-react";
-import { connect } from "react-redux";
-import TaskBoardHeader from "./TaskBoardHeader";
-import TaskBody from "./TaskBody";
+import React, { Component } from 'react';
+import { Container } from 'semantic-ui-react';
+import { connect } from 'react-redux';
+import TaskBoardHeader from './TaskBoardHeader';
+import TaskBody from './TaskBody';
+import Menubar from '../shared/Menubar';
 class Taskpage extends Component {
   render() {
     return (
-      <Container>
-        <TaskBoardHeader />
-        <TaskBody />
-      </Container>
+      <div>
+        <Menubar />
+        <Container>
+          <TaskBoardHeader />
+          <TaskBody />
+        </Container>
+      </div>
     );
   }
 }

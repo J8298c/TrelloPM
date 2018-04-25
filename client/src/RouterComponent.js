@@ -1,8 +1,9 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Splashpage from './components/splashpage/Splashpage';
 import Taskpage from './components/tasks/Taskpage';
+import Menubar from './components/shared/Menubar';
 
 const RouterComponent = () => (
   <BrowserRouter>

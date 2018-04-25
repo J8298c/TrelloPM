@@ -10,7 +10,11 @@ const TaskBody = props => {
 				task.map(t => (
 					<Grid.Row columns={4}>
 						<Grid.Column>{t.description}</Grid.Column>
-						<Grid.Column>{t.assignedTo}</Grid.Column>
+						<Grid.Column>
+							<Label as="a" color="blue" image>
+								{t.assignedTo}
+							</Label>
+						</Grid.Column>
 						<Grid.Column>{t.status}</Grid.Column>
 						<Grid.Column>{t.dueOn}</Grid.Column>
 					</Grid.Row>
